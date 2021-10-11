@@ -1,5 +1,3 @@
-# transcript-with-button
- Use javascript and html to make the interface and button
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>transcript-with-button</title>
 </head>
 
 <body>
+	<h1>Use javascript and html to make the interface and button<h1/>
 	<input type="number" id="score">
 	<button onclick="grades('score')">Calculate!</button> 
 
