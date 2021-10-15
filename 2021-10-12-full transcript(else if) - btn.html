@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+	<input type="text" id="score" value="">
+	<button id="getResult">Calculate!</button> 
+	<p id="result"></p>
+
+    <script>		
+		let button = document.querySelector('#getResult')
+		let result = document.querySelector('#result')
+		let input = document.querySelector('#score')
+
+		button.onclick = function() {
+						
+		let grades = input.value
+		if (isNaN(parseInt(grades))) {
+			result.innerHTML = 'Please type the Number!'
+		} else if (grades < 0) {
+			result.innerHTML = 'Please type the Number between 0~100!'
+		} else if (grades %1 != 0) {
+			result.innerHTML = 'Please type the Integer!!'
+		} else if (grades > 100) {
+			result.innerHTML = 'The score is out of order, please check'
+		} else {
+				if (grades == 100) {
+				// alert('Perfect')
+				// console.log("Perfect")				
+				result.innerHTML = '你的分數是' + grades + '分, 你的成績是 Perfect' 
+			} else if (grades >= 90 && grades < 100) {
+				// alert('A+')
+				// console.log("A+")
+				result.innerHTML = '你的分數是' + grades + '分, 你的成績是 A+' 
+			} else if (grades >= 80 && grades < 90) {
+				// alert('A')
+				// console.log("A")
+				result.innerHTML = '你的分數是' + grades + '分, 你的成績是 A' 
+			} else if (grades >= 70 && grades < 80) {
+				// alert('B')
+				// console.log("B")
+				result.innerHTML = '你的分數是' + grades + '分, 你的成績是 B' 
+			} else if (grades >= 60 && grades < 70) {
+				// alert('C')
+				// console.log("C")
+				result.innerHTML = '你的分數是' + grades + '分, 你的成績是 C' 
+			} else if ( 59 >= grades) {
+				// alert('D')
+				// console.log("D")
+				result.innerHTML = '你的分數是' + grades + '分, 你的成績是 D' 
+			}        
+			}
+			
+		}
+		
+    </script>
+</body>
+
+</html>
